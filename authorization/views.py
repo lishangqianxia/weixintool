@@ -36,9 +36,10 @@ def __authorize_by_code(request):
     #  使用wx.login的到的临时code到微信提供的code2session接口授权
     post_data = request.body.decode('utf-8')
     post_data = json.loads(post_data)
+    print(post_data)
     code = post_data.get('code').strip()
     app_id = post_data.get('appId').strip()
-    nickname = post_data.get('nickname').strip()
+    # nickname = post_data.get('nickname').strip()
 
     response = {}
     if not code or not app_id:
@@ -64,3 +65,7 @@ def __authorize_by_code(request):
     response = wrap_json_response(code=ReturnCode.SUCCESS, message='auth success.')
     return JsonResponse(data=response, safe=False)
     pass
+
+
+def authorize(request):
+    return __authorize_by_code(request)

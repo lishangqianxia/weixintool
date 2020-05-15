@@ -13,6 +13,7 @@ from authorization import views
 
 urlpatterns = [
     path('test', views.test_session),
-    # path('authorize', views.authorize, name='authorize'),
+    path('test2', views.test_session2),
+    path('authorize', views.authorize, name='authorize'),
     path('user', views.UserView.as_view())
 ]
