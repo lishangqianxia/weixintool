@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authorization',
+    'apis'
 ]
 
 MIDDLEWARE = [
@@ -77,8 +79,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'weixintool',
+        'USER': 'lishangqianxia',
+        'PASSWORD': 'LIshang1986',
+        'HOST': 'rm-2ze0892s109g19nh9go.mysql.rds.aliyuncs.com',
+        'PORT': 3306,
     }
 }
 
@@ -124,3 +130,5 @@ STATIC_URL = '/static/'
 RESOURCES_DIR = os.path.join(BASE_DIR, 'resources')
 IMAGES_DIR = os.path.join(RESOURCES_DIR, 'images')
 
+# app secret 由开发者在微信官网开发者页面生成的
+WX_APP_SECRET = '974e769343b14fcaab584164d9e5ae5d'

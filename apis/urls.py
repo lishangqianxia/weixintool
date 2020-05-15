@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import weather, menu, simpleweather, image, service
+from .views import menu, simpleweather, image, service, weather
 
 
 urlpatterns = [

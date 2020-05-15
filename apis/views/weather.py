@@ -1,10 +1,4 @@
-#!/usr/bin/python
 # -*-encoding=utf8 -*-
-# @Author         : imooc
-# @Email          : imooc@foxmail.com
-# @Created at     : 2018/11/21
-# @Filename       : weather.py
-# @Desc           :
 
 import json
 from django.views import View
